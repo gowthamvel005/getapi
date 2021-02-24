@@ -16,7 +16,7 @@ export default class SfmcApiHelper
      * More info: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-getting-started.meta/mc-getting-started/get-access-token.htm
      * 
      */
-    public getOAuthAccessToken(clientId: string, clientSecret: string ,grant_type :string  ) : Promise<any>
+    public getOAuthAccessToken(clientId: string, clientSecret: string  ) : Promise<any>
     {
         let self = this;
         Utils.logInfo("getOAuthAccessToken called.");
@@ -27,8 +27,8 @@ export default class SfmcApiHelper
         };
 
         let postBody = {
-            'clientId': clientId,
-            'clientSecret': clientSecret,
+            'client_id': clientId,
+            'client_secret': clientSecret,
             'grant_type' :'client_credentials'
                        
         };
