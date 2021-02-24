@@ -128,7 +128,7 @@ export default class SfmcApiHelper
             // error
             let errorMsg = "OAuth Access Token *not* found in yes session.\nPlease complete previous demo step\nto get an OAuth Access Token."; 
             Utils.logError(errorMsg);
-            res.status(501).send(errorMsg);
+            res.status(404).send(errorMsg);
         }
     }
 
