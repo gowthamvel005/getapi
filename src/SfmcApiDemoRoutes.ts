@@ -36,7 +36,9 @@ export default class SfmcApiDemoRoutes
             self._apiHelper.getOAuthAccessToken(clientId, clientSecret)
             .then((result) => {
                 req.session.oauthAccessToken = result.oauthAccessToken;
+                Utils.logInfo("token++>"+req.session.oauthAccessToken);
                 req.session.oauthAccessTokenExpiry = result.oauthAccessTokenExpiry;
+                Utils.logInfo("tokenExpiry++>"+req.session.oauthAccessTokenExpiry);
                 res.status(result.status).send(result.statusText);
             })
             .catch((err) => {
