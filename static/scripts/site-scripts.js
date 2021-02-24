@@ -4,7 +4,7 @@ function doRestGet(endPoint, idStatusArea) {
     $('#' + idStatusArea).text('Waiting for response from Marketing Cloud...');
     $.ajax({
         type: "GET",
-        url: "https://getapitokenapplication.herokuapp.com/",
+        url: endPoint,
         dataType: 'text',
     })
     .done (function (data, textStatus, jqXHR) {
