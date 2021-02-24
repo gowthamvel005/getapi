@@ -28,7 +28,8 @@ export default class SfmcApiHelper
 
         let postBody = {
             'clientId': clientId,
-            'clientSecret': clientSecret
+            'clientSecret': clientSecret,
+            
         };
 
         return self.getOAuthTokenHelper(headers, postBody);
@@ -53,7 +54,9 @@ export default class SfmcApiHelper
         let postBody = {
             'clientId': clientId,
             'clientSecret': clientSecret,
-            'refreshToken': refreshToken
+            'refreshToken': refreshToken,
+            
+            
         };
 
         return self.getOAuthTokenHelper(headers, postBody);
