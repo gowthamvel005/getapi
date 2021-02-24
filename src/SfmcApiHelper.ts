@@ -8,7 +8,7 @@ export default class SfmcApiHelper
 {
     // Instance variables
     private _deExternalKey = "DF18Demo";
-    private _sfmcDataExtensionApiUrl = "https://www.exacttargetapis.com/hub/v1/dataevents/key:" + this._deExternalKey + "/rowset";
+    private _sfmcDataExtensionApiUrl = "https://www.exacttargetapis.com/hub/v2/dataevents/key:" + this._deExternalKey + "/rowset";
 
     /**
      * getOAuthAccessToken: POSTs to SFMC Auth URL to get an OAuth access token with the given ClientId and ClientSecret
@@ -68,7 +68,7 @@ export default class SfmcApiHelper
         return new Promise<any>((resolve, reject) =>
         {
             // POST to Marketing Cloud REST Auth service and get back an OAuth access token.
-            let sfmcAuthServiceApiUrl = "https://auth.exacttargetapis.com/v1/requestToken";
+            let sfmcAuthServiceApiUrl = "https://auth.exacttargetapis.com/v2/requestToken";
             axios.post(sfmcAuthServiceApiUrl, postBody, {"headers" : headers})
             .then((response: any) => {
                 // success
