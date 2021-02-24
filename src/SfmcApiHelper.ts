@@ -29,7 +29,7 @@ export default class SfmcApiHelper
         let postBody = {
             'clientId': clientId,
             'clientSecret': clientSecret,
-            'grant_type' :"client_credentials"
+            'grant_type' :'client_credentials'
                        
         };
 
