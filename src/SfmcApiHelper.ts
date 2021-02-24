@@ -138,7 +138,7 @@ export default class SfmcApiHelper
      * More info: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-apis.meta/mc-apis/postDataExtensionRowsetByKey.htm
      * 
      */
-    private loadDataHelper(oauthAccessToken: string, jsonData: string) : Promise<any>    
+    private loadDataHelper(oauthAccessToken: string, samplejsonData: string) : Promise<any>    
     {
         let self = this;
         Utils.logInfo("loadDataHelper called.");
@@ -153,13 +153,14 @@ export default class SfmcApiHelper
             };
 
             // POST to Marketing Cloud Data Extension endpoint to load sample data in the POST body
-            axios.post(self._sfmcDataExtensionApiUrl, jsonData, {"headers" : headers})
+            axios.post(self._sfmcDataExtensionApiUrl, samplejsonData, {"headers" : headers})
             .then((response: any) => {
                 // success
                 Utils.logInfo("Successfully loaded sample data into Data Extension!");
 
                 resolve(
                 {
+                    
                     status: response.status,
                     statusText: response.statusText + "\n" + Utils.prettyPrintJson(JSON.stringify(response.data))
                 });
