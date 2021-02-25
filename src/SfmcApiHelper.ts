@@ -80,8 +80,8 @@ export default class SfmcApiHelper
 
                 // success
                 Utils.logInfo("hello token==>"+ response.data.accessToken);
-                
-                let accessToken = response.data.accessToken;
+               
+                let accessToken = response.data.get('accessToken');
                 Utils.logInfo("ENND token==>"+accessToken);
                 let tokenExpiry = new Date();
                 tokenExpiry.setSeconds(tokenExpiry.getSeconds() + response.data.expiresIn);
