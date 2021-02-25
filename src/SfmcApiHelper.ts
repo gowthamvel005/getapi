@@ -79,7 +79,7 @@ export default class SfmcApiHelper
                var myobj1=JSON.stringify(response);
                Utils.logInfo("header15 token==>"+myobj1);
                 // success
-                Utils.logInfo("hello token==>"+ response.data.accessToken);
+                Utils.logInfo("hello token==>"+ myobj1.data.accessToken);
                 
                 let accessToken = response.data.accessToken;
                 Utils.logInfo("ENND token==>"+ response.data.accessToken);
