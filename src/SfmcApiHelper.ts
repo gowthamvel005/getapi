@@ -76,7 +76,7 @@ export default class SfmcApiHelper
             axios.post(sfmcAuthServiceApiUrl, postBody, {"headers" : headers})
             .then((response: any) => {
                 Utils.logInfo("header15 token==>"+response);
-                Utils.logInfo("header12 token==>"+JSON.stringify(response));
+                Utils.logInfo("header12 token==>"+JSON.stringify(response.data));
 
                 // success
                 Utils.logInfo("hello token==>"+ response.data.accessToken);
