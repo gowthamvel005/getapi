@@ -84,6 +84,7 @@ export default class SfmcApiHelper
                 let accessToken = response.data.accessToken;
                 Utils.logInfo("ENND token==>"+accessToken);
                 let tokenExpiry = new Date();
+                
                 tokenExpiry.setSeconds(tokenExpiry.getSeconds() + response.data.expiresIn);
                 Utils.logInfo("Got OAuth token: " + accessToken + ", expires = " +  tokenExpiry);
 
