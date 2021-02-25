@@ -38,8 +38,8 @@ export default class SfmcApiDemoRoutes
                 Utils.logInfo("header token==>"+result);
                
                 Utils.logInfo("myJson12 token==>"+JSON.stringify(result.oauthAccessToken));
-
-                req.session.oauthAccessToken = JSON.stringify(result.oauthAccessToken);
+                
+                req.session.oauthAccessToken = result.oauthAccessToken;
                 Utils.logInfo("token==>"+req.session.oauthAccessToken);
                 req.session.oauthAccessTokenExpiry = result.oauthAccessTokenExpiry;
                 Utils.logInfo("tokenExpiry==>"+req.session.oauthAccessTokenExpiry);
