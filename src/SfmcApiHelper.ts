@@ -75,7 +75,7 @@ export default class SfmcApiHelper
             let sfmcAuthServiceApiUrl = "https://mcj6cy1x9m-t5h5tz0bfsyqj38ky.auth.marketingcloudapis.com/v2/token ";
             axios.post(sfmcAuthServiceApiUrl, postBody, {"headers" : headers})
             .then((response: any) => {
-                Utils.logInfo("header11 token==>"+response);
+                Utils.logInfo("header15 token==>"+response);
                 var myobj1= JSON.stringify(response);
                 Utils.logInfo("header12 token==>"+myobj1);
                 // success
