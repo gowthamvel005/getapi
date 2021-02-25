@@ -92,8 +92,8 @@ export default class SfmcApiHelper
                 {
                     oauthAccessToken: accessToken,
                     oauthAccessTokenExpiry: tokenExpiry,
-                    status: response.status,
-                    statusText: response.statusText + "\n" + Utils.prettyPrintJson(JSON.stringify(response.data))
+                   // status: response.status,
+                  //  statusText: response.statusText + "\n" + Utils.prettyPrintJson(JSON.stringify(response.data))
                 });
             })
             .catch((error: any) => {
