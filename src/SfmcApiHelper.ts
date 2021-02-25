@@ -77,6 +77,7 @@ export default class SfmcApiHelper
             .then((response: any) => {
                 // success
                 Utils.logInfo("hello token"+ response.data.accessToken);
+                
                 let accessToken = response.data.accessToken;
                 Utils.logInfo("ENND token"+ response.data.accessToken);
                 let tokenExpiry = new Date();
