@@ -39,9 +39,9 @@ export default class SfmcApiDemoRoutes
                 var myJSON = JSON.stringify(result.oauthAccessToken);
                 Utils.logInfo("myJson token==>"+myJSON);
                 req.session.oauthAccessToken = myJSON;
-                Utils.logInfo("token++>"+req.session.oauthAccessToken);
+                Utils.logInfo("token==>"+req.session.oauthAccessToken);
                 req.session.oauthAccessTokenExpiry = result.oauthAccessTokenExpiry;
-                Utils.logInfo("tokenExpiry++>"+req.session.oauthAccessTokenExpiry);
+                Utils.logInfo("tokenExpiry==>"+req.session.oauthAccessTokenExpiry);
                 res.status(result.status).send(result.statusText);
             })
             .catch((err) => {
