@@ -79,9 +79,9 @@ export default class SfmcApiHelper
                 Utils.logInfo("header12 token==>"+JSON.stringify(response.data));
 
                 // success
-                Utils.logInfo("hello token==>"+ response.data);
+                Utils.logInfo("hello token==>"+ response.data.access_token);
                
-                let accessToken = response.data;
+                let accessToken = response.data.access_token;
                 Utils.logInfo("ENND token==>"+accessToken);
                 let tokenExpiry = new Date();
 
@@ -93,6 +93,7 @@ export default class SfmcApiHelper
                     oauthAccessToken: accessToken,
                     oauthAccessTokenExpiry: tokenExpiry,
                     status: response.status,
+                    
                     statusText: response.statusText + "\n" + Utils.prettyPrintJson(JSON.stringify(response.data))
                 });
             })
