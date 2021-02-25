@@ -53,8 +53,8 @@ export default class SfmcApiHelper
         };
 
         let postBody = {
-            'client_id': clientId,
-            'client_secret': clientSecret,
+            'clientId': clientId,
+            'clientSecret': clientSecret,
             'refreshToken': refreshToken,
             
             
